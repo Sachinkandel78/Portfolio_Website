@@ -22,7 +22,7 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     justify-content:space-between;
     align-items:center;
     z-index: 100;
-    background: red;
+    
    
 }
 .logo{
@@ -45,4 +45,32 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
 
 .navbar a:hover{
     color: #0ef
+}
+
+/* home section styling */
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(homepage1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+
+}
+.home-content {
+    max-width: 600px;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+.home-content h1
+{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
 }
