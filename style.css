@@ -31,6 +31,9 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 .navbar a{
@@ -67,6 +70,12 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h3 span{
+    color: #0ef;
 }
 .home-content h1
 {
@@ -113,4 +122,16 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0  0 200px cyan;
+}
+/* @keyframes भनेको animation को सुरुवात र अन्त्यमा element कस्तो हुनुपर्छ भनेर define गर्ने हो। 
+yo mathi .logo ma use vaxa hai tyo logo lai animation dida */
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);  /* Logo आफ्नो original position भन्दा 100px left मा हुन्छ। */
+    }
+    100%{
+        transform: translateX(0); /* Logo आफ्नो original position मा आउँछ। */
+        opacity: 1;
+    }
 }
