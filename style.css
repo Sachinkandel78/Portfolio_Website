@@ -1,17 +1,18 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    color:#ededed
+
+body {
+    color: #ededed
 }
+
 /* header section styling (header vitra navbar ni parxa
 aba kina .header vayo tw vanda hamle class=header vanera use gareyxam teivara
 aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,14 +20,15 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     padding: 20px 10%;
     background: transparent;
     display: flex;
-    justify-content:space-between;
-    align-items:center;
+    justify-content: space-between;
+    align-items: center;
     z-index: 100;
-    
-   
+
+
 }
-.logo{
-    position:relative;
+
+.logo {
+    position: relative;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
@@ -36,7 +38,7 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     animation: slideRight 1s ease forwards;
 }
 
-.navbar a{
+.navbar a {
     display: inline-block;
     font-size: 20px;
     color: #fff;
@@ -44,19 +46,21 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     font-weight: 500;
     margin-left: 35px;
     transition: 0.3s;
-    opacity:0;
-    animation: slideTop .5s ease forwards; /* slide top vanya 
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    /* slide top vanya 
     bottom dekhi top ma slide hudai aauni yedi slideright vanyo vaney left to right slide huni 
     forwards ले animation सकिएपछि element लाई animation को अन्तिम अवस्था मै राखिराख्छ। 
     ease भनेको animation को speed कसरी change हुने भनेर define गर्ने हो।*/
+    animation-delay: calc(0.2s * var(--i));
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #0ef
 }
 
 /* home section styling */
-.home{
+.home {
     position: relative;
     width: 100%;
     justify-content: space-between;
@@ -69,39 +73,48 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     padding: 70px 10% 0;
 
 }
+
 .home-content {
     max-width: 500px;
 }
+
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
     opacity: 0;
-    animation: slideBottom 1s ease forwards; 
-    animation-delay: 0.7s; /*animation सुरु हुनुअघि 0.7 second को delay राखिएको छ। */
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+    /*animation सुरु हुनुअघि 0.7 second को delay राखिएको छ। */
 }
-.home-content h3:nth-of-type(2){
+
+.home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
 }
-.home-content h3 span{
+
+.home-content h3 span {
     color: #0ef;
 }
-.home-content h1
-{
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
     opacity: 0;
-    animation: slideRight 1s ease forwards; 
+    animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
-.home-content p{
+
+.home-content p {
     font-size: 18px;
     opacity: 0;
-    animation: slideLeft 1s ease forwards; 
+    animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
+
 /* social icons styling */
-.home-socialIcons a{
+.home-socialIcons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -114,19 +127,21 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     color: #0ef;
     text-decoration: none;
     margin: 30px 15px 30px 0;
-    transition: 0.5s ease; 
+    transition: 0.5s ease;
     opacity: 0;
-    animation: slideLeft 1s ease forwards; 
-    animation-delay: calc(0.2s * var); /* calc() function ले CSS मा mathematical expressions लाई calculate गर्न प्रयोग हुन्छ। */
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    /* calc() function ले CSS मा mathematical expressions लाई calculate गर्न प्रयोग हुन्छ। */
 }
-.home-socialIcons a:hover{
+
+.home-socialIcons a:hover {
     background: #0ef;
     color: #fff;
     box-shadow: 0 0 20px #0ef;
-   
+
 }
 
-.btn-box{
+.btn-box {
     display: inline-block;
     padding: 12px 18px;
     background: #0ef;
@@ -136,52 +151,66 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     color: #081b29;
     letter-spacing: 1px;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
 }
-.btn-box:hover{
+
+.btn-box:hover {
     box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0  0 200px cyan;
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
 }
+
 /* @keyframes भनेको animation को सुरुवात र अन्त्यमा element कस्तो हुनुपर्छ भनेर define गर्ने हो। 
 yo mathi .logo ma use vaxa hai tyo logo lai animation dida */
-@keyframes slideRight{
-    0%{
+@keyframes slideRight {
+    0% {
         opacity: 0;
-        transform: translateX(-100px);  /* Logo आफ्नो original position भन्दा 100px right मा हुन्छ। */
+        transform: translateX(-100px);
+        /* Logo आफ्नो original position भन्दा 100px right मा हुन्छ। */
     }
-    100%{
-        transform: translateX(0); /* Logo आफ्नो original position मा आउँछ। */
+
+    100% {
+        transform: translateX(0);
+        /* Logo आफ्नो original position मा आउँछ। */
         opacity: 1;
     }
 }
 
-@keyframes slideTop{
-    0%{
+@keyframes slideTop {
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes slideBottom{
-    0%{
+@keyframes slideBottom {
+    0% {
         opacity: 0;
         transform: translateY(-100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-@keyframes slideLeft{
-    0%{
+
+@keyframes slideLeft {
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
