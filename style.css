@@ -44,6 +44,11 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     font-weight: 500;
     margin-left: 35px;
     transition: 0.3s;
+    opacity:0;
+    animation: slideTop .5s ease forwards; /* slide top vanya 
+    bottom dekhi top ma slide hudai aauni yedi slideright vanyo vaney left to right slide huni 
+    forwards ले animation सकिएपछि element लाई animation को अन्तिम अवस्था मै राखिराख्छ। 
+    ease भनेको animation को speed कसरी change हुने भनेर define गर्ने हो।*/
 }
 
 .navbar a:hover{
@@ -70,6 +75,9 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards; 
+    animation-delay: 0.7s; /*animation सुरु हुनुअघि 0.7 second को delay राखिएको छ। */
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
@@ -82,9 +90,15 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards; 
+    animation-delay: 1s;
 }
 .home-content p{
     font-size: 18px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards; 
+    animation-delay: 1s;
 }
 /* social icons styling */
 .home-socialIcons a{
@@ -99,12 +113,17 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     font-size: 20px;
     color: #0ef;
     text-decoration: none;
-    margin: 30px 15px 30px 0;   
+    margin: 30px 15px 30px 0;
+    transition: 0.5s ease; 
+    opacity: 0;
+    animation: slideLeft 1s ease forwards; 
+    animation-delay: calc(0.2s * var); /* calc() function ले CSS मा mathematical expressions लाई calculate गर्न प्रयोग हुन्छ। */
 }
 .home-socialIcons a:hover{
     background: #0ef;
     color: #fff;
     box-shadow: 0 0 20px #0ef;
+   
 }
 
 .btn-box{
@@ -128,10 +147,42 @@ yo mathi .logo ma use vaxa hai tyo logo lai animation dida */
 @keyframes slideRight{
     0%{
         opacity: 0;
-        transform: translateX(-100px);  /* Logo आफ्नो original position भन्दा 100px left मा हुन्छ। */
+        transform: translateX(-100px);  /* Logo आफ्नो original position भन्दा 100px right मा हुन्छ। */
     }
     100%{
         transform: translateX(0); /* Logo आफ्नो original position मा आउँछ। */
         opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
