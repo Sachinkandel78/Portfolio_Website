@@ -356,13 +356,23 @@ section {
     opacity: 0;
 }
 
+@keyframes showText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .technical-bars .bar .progress-line {
     position: relative;
     border-radius: 10px;
     width: 100%;
     height: 5px;
     background-color: #000000;
-    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -379,72 +389,82 @@ section {
     border-radius: 10px;
     height: 100%;
     background-color: #0ef;
-    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 
 }
 
 .progress-line.html span {
-    
-    width: 90%;
-    
-}
 
-.progress-line.CSS span {
     width: 80%;
+
 }
 
-.progress-line.Javascript span {
+.progress-line.css span {
     width: 70%;
 }
 
-.progress-line.Python span {
-    width: 85%;
+.progress-line.Javascript span {
+    width: 60%;
 }
-.progress-line.Django span {
-    width: 85%;
+
+.progress-line.iot span {
+    width: 30%;
 }
+
 .progress-line.AiMl span {
-    width: 85%;
+    width: 45%;
 }
-.progress-line span::after
-{
+
+.progress-line.Django span {
+    width: 70%;
+}
+
+.progress-line span::after {
     position: absolute;
     padding: 1px 8px;
     background-color: #0000;
-    color:#fff;
+    color: #fff;
     font-size: 12px;
     border-radius: 3px;
-    top:28px;
-    right:-20px;
+    top: 28px;
+    right: -20px;
     animation: showText 0.5s 1.5s linear forwards;
     opacity: 0;
 
 }
-.progress-line.html span::after
-{
-    content: "80%";
-}
-.progress-line.CSS span::after
-{
-    content: "80%";
-}
-.progress-line.Javascript span::after
-{
-    content: "80%";
-}
-.progress-line.Django span::after
-{
-    content: "80%";
-}
-.progress-line.AiMl span::after
-{
+
+.progress-line.html span::after {
     content: "80%";
 }
 
+.progress-line.css span::after {
+    content: "70%";
+}
 
+.progress-line.Javascript span::after {
+    content: "60%";
+}
 
+.progress-line.iot span::after {
+    content: "30%";
+}
+
+.progress-line.AiMl span::after {
+    content: "45%";
+}
+.progress-line.Django span::after {
+    content: "70%";
+}
+
+/* professional skills */
+.radial-bars{
+
+}
+.progress-bar{
+    
+}
 
 
 
