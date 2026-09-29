@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Sachin Kandel | Python & Django Developer</title>
+    <meta name="description"
+        content="Portfolio of Sachin Kandel, a Computer Engineering student and Python & Django developer specializing in web development, IoT and AI/ML projects.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link import from boxicons/usage.com -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,12 +41,12 @@
                 Programming. I'm always looking for opportunity to learn something new and grow professionally.
             </p>
             <div class="home-socialIcons">
-                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-instagram'></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#" style="--i:10"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" style="--i:7" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:8" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:9" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#" style="--i:10" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <a href="#" class="btn-box">View Resume</a>
+            <a href="/files/Sachin_Kandel.pdf" target="_blank" rel="noopener" class="btn-box">View Resume</a>
         </div>
         <span class="home-imghover"></span>
     </section>
@@ -231,7 +235,8 @@
                             <p>I build robust server-side applications using Python and Django, including REST APIs,
                                 database design, and authentication systems. I focus on writing clean, scalable code
                                 that powers real-world web apps.</p>
-                            <a href="#"><i style='color:aliceblue;' class='bx bx-link-external'></i></a>
+                            <a href="#" aria-label="View project"><i style='color:aliceblue;'
+                                    class='bx bx-link-external'></i></a>
                         </div>
                     </div>
                     <div class="row">
@@ -241,7 +246,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde quidem quas necessitatibus
                                 deserunt, veniam porro quis natus alias sed officia omnis fugiat dignissimos, delectus
                                 tempora optio reprehenderit saepe harum. Odio!</p>
-                            <a href="#"><i style='color:aliceblue;' class='bx bx-link-external'></i></a>
+                            <a href="#" aria-label="View project"><i style='color:aliceblue;'
+                                    class='bx bx-link-external'></i></a>
                         </div>
                     </div>
                     <div class="row">
@@ -251,7 +257,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde quidem quas necessitatibus
                                 deserunt, veniam porro quis natus alias sed officia omnis fugiat dignissimos, delectus
                                 tempora optio reprehenderit saepe harum. Odio!</p>
-                            <a href="#"><i style='color:aliceblue;' class='bx bx-link-external'></i></a>
+                            <a href="#" aria-label="View project"><i style='color:aliceblue;'
+                                    class='bx bx-link-external'></i></a>
                         </div>
                     </div>
                 </div>
@@ -282,20 +289,22 @@
             </div>
 
             <div class="contact-form">
-                <form action="">
-                    <input type="" placeholder="Enter Your Name" required>
-                    <input type="email" placeholder="Enter Your Email" required>
-                    <input type="" placeholder="Subject" required>
-                    <textarea name="" id="" cols="40" rows="10" placeholder="Write a Message" required></textarea>
+                <form action="https://formspree.io/f/xljdalog" method="POST">
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" cols="40" rows="10" placeholder="Write a Message" required></textarea>
                     <input type="submit" class="send" value="send message">
                 </form>
             </div>
+        </div>
         </div>
     </section>
     <div class="last-text">
         © Copyright Sachin Kandel All Rights Reserved
     </div>
-    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+    <a href="#home" class="top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
 
 
 
