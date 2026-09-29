@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link import from boxicons/usage.com -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,7 +20,7 @@
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About </a>
-            <a href="#services" style="--i:3">Skills</a>
+            <a href="#skills" style="--i:3">Skills</a>
             <a href="#project" style="--i:4">Portfolio</a>
             <a href="#contact" style="--i:5">Contact</a>
 
@@ -30,7 +33,8 @@
             <h3>Hi, It's Me</h3>
             <h1>Sachin Kandel</h1>
             <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm really interested in Technology and Problem solving.Right now focusing on my Communication skills and Programming. I'm always looking for opportunity to learn something new and grow professionally.
+            <p>I'm really interested in Technology and Problem solving.Right now focusing on my Communication skills and
+                Programming. I'm always looking for opportunity to learn something new and grow professionally.
             </p>
             <div class="home-socialIcons">
                 <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
@@ -62,35 +66,34 @@
         </div>
 
     </section>
-
+    <!---About section finish.Services section start-->
     <section>
         <div class="services" id="services">
             <div class="container">
                 <h1 class="sub-title">My <span>Services</span></h1>
                 <div class="services-list">
                     <div>
-                        <i class="bx bx-code" style='color: #00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro tempora dolores vitae
-                            nesciunt iure necessitatibus magni. Dolorem voluptatibus amet, error aliquam beatae sit
-                            eveniet architecto dolore labore esse dignissimos!</p>
-                        <a href="#" class="read">Learn More</a>
+                        <i class="bx bxl-django" style='color: #00eeff'></i>
+                        <h2>Backend Development</h2>
+                        <p>I build robust server-side applications using Python and Django, including REST APIs,
+                            database design, and authentication systems. I focus on writing clean, scalable code
+                            that powers real-world web apps.</p>
+                        <a href="#project" class="read">Learn More</a>
                     </div>
                     <div>
-                        <i class="bx bx-crop" style='color: #00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro tempora dolores vitae
-                            nesciunt iure necessitatibus magni. Dolorem voluptatibus amet, error aliquam beatae sit
-                            eveniet architecto dolore labore esse dignissimos!</p>
-                        <a href="#" class="read">Learn More</a>
+                        <i class="bx bx-microchip" style='color: #00eeff'></i>
+                        <h2>IoT Solutions</h2>
+                        <p>I design and build IoT systems using ESP32 and Arduino, from sensor integration to
+                            real-time data collection, bridging hardware and software to solve practical
+                            problems.</p>
+                        <a href="#project" class="read">Learn More</a>
                     </div>
                     <div>
-                        <i class="bx bxl-apple" style='color: #00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro tempora dolores vitae
-                            nesciunt iure necessitatibus magni. Dolorem voluptatibus amet, error aliquam beatae sit
-                            eveniet architecto dolore labore esse dignissimos!</p>
-                        <a href="#" class="read">Learn More</a>
+                        <i class="bx bx-brain" style='color: #00eeff'></i>
+                        <h2>AI / ML Projects</h2>
+                        <p>I explore machine learning and AI to build intelligent features, from data analysis
+                            to predictive models, applying them to real projects rather than just theory.</p>
+                        <a href="#project" class="read">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +102,7 @@
     <h1 class="sub-title">My <span>Skills</span></h1>
 
     <!--- My skills section-->
-    <section >
+    <section id="skills">
         <div class="container1">
             <h1 class="heading-1">Technical Skills</h1>
             <div class="technical-bars">
@@ -216,18 +219,18 @@
 
     <!---MY projects section start / portfolio-->
     <section>
-        <div id="portfolio" id="project">
-            <div class="main-text" id="project">
+        <div id="project">
+            <div class="main-text">
                 <h2>Latest <span>Projects</span></h2>
 
                 <div class="portfolio-content">
                     <div class="row">
                         <img src="images/0e66ceb0da22e56fcc30cee4415b964b.jpg">
                         <div class="layer">
-                            <h5>UI/UX Design</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde quidem quas necessitatibus
-                                deserunt, veniam porro quis natus alias sed officia omnis fugiat dignissimos, delectus
-                                tempora optio reprehenderit saepe harum. Odio!</p>
+                            <h5>Backend Development</h5>
+                            <p>I build robust server-side applications using Python and Django, including REST APIs,
+                                database design, and authentication systems. I focus on writing clean, scalable code
+                                that powers real-world web apps.</p>
                             <a href="#"><i style='color:aliceblue;' class='bx bx-link-external'></i></a>
                         </div>
                     </div>
@@ -289,10 +292,10 @@
             </div>
         </div>
     </section>
-<div class="last-text">
-    © Copyright Sachin Kandel All Rights Reserved
-</div>
-<a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div class="last-text">
+        © Copyright Sachin Kandel All Rights Reserved
+    </div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
 
 
 
