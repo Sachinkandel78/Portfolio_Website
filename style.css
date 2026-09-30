@@ -60,6 +60,9 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
 .navbar a:hover {
     color: #0ef
 }
+.navbar a.current {
+    color: #0ef;
+}
 
 /* home section styling */
 .home {
@@ -67,7 +70,7 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(images/homepage4.png) no-repeat;
+    background: url(images/homepage4.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -965,7 +968,7 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
         z-index: 1000;
     }
 
-    .navbar.active {
+    .navbar.menu-open {
         right: 0;
     }
 }
