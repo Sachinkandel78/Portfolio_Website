@@ -31,3 +31,5 @@ menuIcon.onclick = () => {
 // <nav id="navbar" class="navbar">
 // ↑ menu-open word class बाट हटाइयो, CSS rule aba match hudaina, navbar फेरि screen बाहिर जान्छ।
 
+const sections = document.querySelectorAll("section[id]");
+const
