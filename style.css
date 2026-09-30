@@ -185,6 +185,8 @@ aba header ko satoo class=goru rakheyko vaye .goru hunthyo styling garda*/
 
 }
 
+/* media query last ma xa hai jasko kam every screeen ma kam chalos vanni ho not only laptop */
+
 .about-text h2 {
     font-size: 60px;
 }
@@ -683,33 +685,38 @@ layer i {
 }
 
 /* My projects section sakkiyo aba contact section ko styling*/
-.contact{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap:3rem;
+    gap: 3rem;
     margin-left: 30px;
     margin-top: 130px;
 }
-.contact-text{
-height: 100%;
 
-width:100%;
+.contact-text {
+    height: 100%;
+
+    width: 100%;
 }
-.contact-text h2{
+
+.contact-text h2 {
     font-size: 60px;
-   height: 1;
-   text-align: center;
+    height: 1;
+    text-align: center;
 }
-.contact-text h2 span{
-    color:#0ef
+
+.contact-text h2 span {
+    color: #0ef
 }
-.contact-text h4{
+
+.contact-text h4 {
     margin: 15px 0;
     font-size: 20px;
     font-weight: 600;
-    color:rgba(228,228,228);
+    color: rgba(228, 228, 228);
 }
+
 .contact-text p {
     color: rgb(177, 177, 177);
     font-size: 20px;
@@ -727,12 +734,13 @@ width:100%;
 }
 
 .contact-list i {
-    display:inline-block;
-    color:#0ef;
+    display: inline-block;
+    color: #0ef;
     font-size: 20p;
     font-weight: 600;
     transition: all 0.40s ease;
 }
+
 .contact-list li a:hover {
     transform: scale(1.01) translateY(-5px);
     color: #0ef;
@@ -756,35 +764,39 @@ width:100%;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
+
 .contact-icons i:hover {
     background: #0ef;
     color: #000;
     box-shadow: 0 0 20px #0ef;
 }
+
 .contact-form form {
     position: relative;
 }
 
-.contact-form form input, form textarea {
-    border:none;
-    outline:none;
-    width:90%;
+.contact-form form input,
+form textarea {
+    border: none;
+    outline: none;
+    width: 90%;
     padding: 18px;
     background: #555557;
-    color:#000;
+    color: #000;
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom:0.5rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.5rem;
 
 }
-.contact-form textarea{
+
+.contact-form textarea {
     resize: none;
-    height:220px;
+    height: 220px;
 }
 
-.contact-form form .send{
-     display: inline-block;
+.contact-form form .send {
+    display: inline-block;
     padding: 14px 60px;
     background: #0ef;
     border-radius: 40px;
@@ -805,27 +817,31 @@ width:100%;
         0 0 25px cyan, 0 0 50px cyan,
         0 0 100px cyan, 0 0 200px cyan;
 }
-.last-text{
-    width:100%;
+
+.last-text {
+    width: 100%;
     text-align: center;
-    padding:25px;
+    padding: 25px;
     font-weight: 300;
     margin-top: 70px;
-    background: rgb(7,85,91);
+    background: rgb(7, 85, 91);
 }
-.last-text span{
+
+.last-text span {
     font-weight: bold;
 }
-.top{
-    position:fixed;
-    bottom:2.1rem;
-    right:2.1rem;
+
+.top {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
 }
-.top i{
-    color:black;
+
+.top i {
+    color: black;
     background: #0ef;
-    font-size:20px;
-    padding:10px;
+    font-size: 20px;
+    padding: 10px;
     border-radius: 0.5rem;
 }
 
@@ -880,5 +896,76 @@ yo mathi .logo ma use vaxa hai tyo logo lai animation dida */
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/*Responsive Styles 
+@media = "condition-based CSS"
+Normal CSS le sadhai apply huncha, jasto sukai screen size hos. @media chai euta "if" statement jasto ho — "yedi yo condition milyo bhane, yo CSS apply gara, natra nagara." */
+/* Tablets and large phones ko lagi
+/* yo tab matra apply huncha jaba screen ≤ 768px */
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-img {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        margin-top: 30px;
+    }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 650px) {
+    .container1 {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+/* Hamburger icon- hidden on desktop by default
+yo tyo navbar ma aba phone ma kholda tw purai eutai line ma aaatuanna home skill contact about
+so teivara yo menu/toggle icon use gareu ani tesko lagi css normal laptop ma chaluda tyo icon lukauni
+tara phone ma chai tyo icon dekhauni navbar components lukauni */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #0ef;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: #081b29;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 30px;
+        gap: 25px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        right: 0;
     }
 }
