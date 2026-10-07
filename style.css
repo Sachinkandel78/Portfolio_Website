@@ -9,6 +9,7 @@
 body {
     color: #ededed;
     background: #081b29;
+    
 }
 
 /* header section styling (header vitra navbar ni parxa
@@ -719,6 +720,7 @@ layer i {
     font-size: 60px;
     height: 1;
     text-align: center;
+  
 }
 
 .contact-text h2 span {
@@ -787,6 +789,7 @@ layer i {
 }
 
 .contact-form form {
+      margin-top: 100px;
     position: relative;
 }
 
@@ -1015,5 +1018,58 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
 
     .navbar.menu-open {
         right: 0;
+    }
+}
+
+/* Mobile layout fixes */
+@media (max-width: 768px) {
+    .header {
+        padding: 16px 6%;
+    }
+
+    .home {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 8% 48px;
+        background-position: right center;
+        /* background-position: 65% center; */
+    }
+
+    .home-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: clamp(2.3rem, 10vw, 3.5rem);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+
+    .home-content h3 {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+        line-height: 1.3;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .home-socialIcons a {
+        margin: 24px 12px 24px 0;
+    }
+
+    .container {
+        padding: 40px 6%;
+    }
+
+    .sub-title {
+        font-size: 2.3rem;
+        padding-bottom: 35px;
+    }
+
+    .portfolio-content {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
