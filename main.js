@@ -70,3 +70,41 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();                       // redirect hudaina
+
+        const btn = contactForm.querySelector(".send");
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+        formStatus.textContent = "";
+        formStatus.className = "form-status";
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: { Accept: "application/json" }
+            });
+
+            if (response.ok) {
+                contactForm.reset();              // form khali hunchha
+                formStatus.textContent = "Thank you! Your message has been sent.";
+                formStatus.classList.add("success");
+            } else {
+                throw new Error("Request failed");
+            }
+        } catch (error) {
+            formStatus.textContent = "Oops! Something went wrong. Please try again.";
+            formStatus.classList.add("error");
+        } finally {
+            btn.disabled = false;
+            btn.textContent = "Send Message";
+        }
+    });
+}

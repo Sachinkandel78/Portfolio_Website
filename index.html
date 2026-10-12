@@ -299,17 +299,15 @@
             </div>
 
             <div class="contact-form">
-                <form action="https://formspree.io/f/xljdalog" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" aria-label="Your name" autocomplete="name"
-                        required>
-                    <input type="email" name="email" placeholder="Your Email" aria-label="Your email"
-                        autocomplete="email" required>
-                    <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required>
-                    <textarea name="message" rows="8" placeholder="Write a Message" aria-label="Message"
-                        required></textarea>
-                    <button type="submit" class="send">Send Message</button>
-                </form>
-            </div>
+    <form id="contact-form" action="https://formspree.io/f/xljdalog" method="POST">
+        <input type="text" name="name" placeholder="Your Name" aria-label="Your name" autocomplete="name" required>
+        <input type="email" name="email" placeholder="Your Email" aria-label="Your email" autocomplete="email" required>
+        <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required>
+        <textarea name="message" rows="8" placeholder="Write a Message" aria-label="Message" required></textarea>
+        <button type="submit" class="send">Send Message</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+</div>
         </div>
      </div>
     </section>

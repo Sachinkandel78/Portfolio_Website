@@ -878,8 +878,29 @@ aba my projects section suru */
     transform: translateY(0);
 }
 
-/* contact section sakkiyo */
+ /* yo chai form submit gareypaxi back garda feri suru bata start huni banauni styling */
 
+ .form-status {
+    font-size: 0.95rem;
+    min-height: 1.4em;
+    margin-top: 4px;
+}
+
+.form-status.success {
+    color: #0ef;
+}
+
+.form-status.error {
+    color: #ff6b6b;
+}
+
+.contact-form .send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* contact section sakkiyo */
 
 .last-text {
     width: 100%;
