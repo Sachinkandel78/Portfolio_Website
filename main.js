@@ -1,11 +1,20 @@
-var typed = new Typed(".text",{
-    strings: ["Backend Developer","Problem Solver", "AI/ML Enthusiast", "Full Stack Developer","Computer Engineer"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop:true
-});
+// var typed = new Typed(".text",{
+//     strings: ["Backend Developer","Problem Solver", "AI/ML Enthusiast", "Full Stack Developer","Computer Engineer"],
+//     typeSpeed: 100,
+//     backSpeed: 100,
+//     backDelay: 1000,
+//     loop:true
+// });
 
+if (typeof Typed !== "undefined") {
+    var typed = new Typed(".text", {
+        strings: ["Backend Developer", "Problem Solver", "AI/ML Enthusiast", "Full Stack Developer", "Computer Engineer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+}
 
 const menuIcon = document.getElementById("menu-icon");
 const navbar = document.getElementById("navbar");
@@ -13,9 +22,12 @@ const navbar = document.getElementById("navbar");
 // menuIcon.onclick = () => {
 //     navbar.classList.toggle("menu-open");
 // };                                           yo purano tarika ho, aba naya tarika use garne ho, addEventListener() method use garera.
-menuIcon.addEventListener("click", () => {
-    navbar.classList.toggle("menu-open");
-});
+// 
+if (menuIcon && navbar) {
+    menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("menu-open");
+    });
+}
 
 
 //classList chai euta toolbox जस्तो सोच्नुहोस् — यसभित्र class add गर्ने, हटाउने, check गर्ने, धेरै साना function (tools) आउँछन्।
@@ -72,28 +84,29 @@ window.addEventListener("scroll", () => {
 });
 
 
+// ---------- Contact form (fetch, no redirect) ----------
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
-
-if (contactForm) {
+ 
+if (contactForm && formStatus) {
     contactForm.addEventListener("submit", async (e) => {
-        e.preventDefault();                       // redirect hudaina
-
+        e.preventDefault(); // Formspree ma redirect hudaina
+ 
         const btn = contactForm.querySelector(".send");
         btn.disabled = true;
         btn.textContent = "Sending...";
         formStatus.textContent = "";
         formStatus.className = "form-status";
-
+ 
         try {
             const response = await fetch(contactForm.action, {
                 method: "POST",
                 body: new FormData(contactForm),
                 headers: { Accept: "application/json" }
             });
-
+ 
             if (response.ok) {
-                contactForm.reset();              // form khali hunchha
+                contactForm.reset(); // form khali hunchha
                 formStatus.textContent = "Thank you! Your message has been sent.";
                 formStatus.classList.add("success");
             } else {
@@ -108,3 +121,4 @@ if (contactForm) {
         }
     });
 }
+ 
