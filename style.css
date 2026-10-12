@@ -1073,3 +1073,16 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
+/* Mobile hero: show the whole photo ring on top, text below it */
+@media (max-width: 768px) {
+    .home {
+        height: auto;
+        min-height: 0;
+        padding: calc(98vw + 24px) 8% 56px;
+        background-size: 220% auto;
+        background-position: 90% top;
+        background-repeat: no-repeat;
+        align-items: flex-start;
+    }
+}
