@@ -941,6 +941,9 @@ Normal CSS le sadhai apply huncha, jasto sukai screen size hos. @media chai euta
     .contact-form {
         margin-top: 30px;
     }
+    .project{
+        margin-top: -10px;
+    }
 }
 
 /* Tablets and small laptops */
