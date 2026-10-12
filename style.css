@@ -1086,3 +1086,50 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
         align-items: flex-start;
     }
 }
+
+
+/* Mobile About: tighter photo, smaller text */
+@media (max-width: 768px) {
+    .about {
+        padding: 56px 6% 24px;
+        gap: 1rem;
+    }
+
+    .about-img {
+        display: block;
+        position: relative;
+        width: min(78vw, 320px);
+        aspect-ratio: 1 / 1;
+        margin: 0 auto 8px;
+        overflow: hidden;
+    }
+
+    /* about6.png has lots of empty space around the ring, so crop to the ring */
+    .about-img img {
+        position: absolute;
+        width: 189%;
+        max-width: none;
+        height: auto;
+        left: -25%;
+        top: -18.6%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .about-text h2 {
+        font-size: 2.3rem;
+    }
+
+    .about-text h4 {
+        font-size: 1.35rem;
+        line-height: 1.4;
+        margin: 10px 0 20px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+}
