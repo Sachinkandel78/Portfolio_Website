@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-       <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=2">
     <!-- Boxicons CDN Link import from boxicons/usage.com -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
@@ -236,34 +236,34 @@
 
                 <div class="portfolio-content">
                     <div class="row">
-                        <img src="images/EMS.jpeg"
-                            alt="Django web application project screenshot">
+                        <img src="images/EMS.jpeg" alt="Django web application project screenshot">
                         <div class="layer">
                             <h5>Backend Development</h5>
                             <p>I build robust server-side applications using Python and Django, including REST APIs,
                                 database design, and authentication systems. I focus on writing clean, scalable code
                                 that powers real-world web apps.</p>
-                            <a href="#" target="_blank" rel="noopener" aria-label="View project"><i class='bx bx-link-external'></i></a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="View project"><i
+                                    class='bx bx-link-external'></i></a>
                         </div>
                     </div>
                     <div class="row">
-                        <img src="images/iot.jpeg"
-                            alt="IoT monitoring system project screenshot">
+                        <img src="images/iot.jpeg" alt="IoT monitoring system project screenshot">
                         <div class="layer">
                             <h5>IoT Monitoring System</h5>
                             <p>An ESP32/Arduino-based sensor system that collects and displays real-time data, such as
                                 temperature and humidity, bridging hardware and software.</p>
-                            <a href="#" target="_blank" rel="noopener" aria-label="View project"><i class='bx bx-link-external'></i></a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="View project"><i
+                                    class='bx bx-link-external'></i></a>
                         </div>
                     </div>
                     <div class="row">
-                        <img src="images/AiML.png"
-                            alt="AI and machine learning mini project screenshot">
+                        <img src="images/AiML.png" alt="AI and machine learning mini project screenshot">
                         <div class="layer">
                             <h5>AI / ML Mini Project</h5>
                             <p>A machine learning project applying data analysis and predictive modeling to a real
                                 problem, such as a basic classifier or a simple chatbot.</p>
-                          <a href="#" target="_blank" rel="noopener" aria-label="View project"><i class='bx bx-link-external'></i></a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="View project"><i
+                                    class='bx bx-link-external'></i></a>
                         </div>
                     </div>
                 </div>
@@ -280,10 +280,11 @@
                 <h4>Let's work Together</h4>
                 <p>Feel Free to reach out to me for any queries / collaboration offers
                 </p>
-                <div class="contact-list">
-                    <li><i class='bx bxs-send'></i>sachinkandel78@gmail.com</li>
-                    <li><i class='bx bxs-phone'></i>977+ 98*****138</li>
-                </div>
+                <ul class="contact-list">
+                    <li><i class='bx bxs-send'></i><a
+                            href="mailto:sachinkandel78@gmail.com">sachinkandel78@gmail.com</a></li>
+                    <li><i class='bx bxs-phone'></i><a href="tel:+9779814216138">+977 98******38</a></li>
+                </ul>
                 <div class="contact-icons">
                     <a href="https://www.facebook.com/sachin.kandel.7878/" target="_blank" rel="noopener"
                         aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
@@ -299,15 +300,18 @@
 
             <div class="contact-form">
                 <form action="https://formspree.io/f/xljdalog" method="POST">
-                    <input type="text" name="name" placeholder="Enter Your Name" required>
-                    <input type="email" name="email" placeholder="Enter Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" cols="40" rows="10" placeholder="Write a Message" required></textarea>
-                    <input type="submit" class="send" value="send message">
+                    <input type="text" name="name" placeholder="Your Name" aria-label="Your name" autocomplete="name"
+                        required>
+                    <input type="email" name="email" placeholder="Your Email" aria-label="Your email"
+                        autocomplete="email" required>
+                    <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required>
+                    <textarea name="message" rows="8" placeholder="Write a Message" aria-label="Message"
+                        required></textarea>
+                    <button type="submit" class="send">Send Message</button>
                 </form>
             </div>
         </div>
-        </div>
+     </div>
     </section>
     <div class="last-text">
         © Copyright Sachin Kandel All Rights Reserved
