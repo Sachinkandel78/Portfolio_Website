@@ -957,8 +957,8 @@ Normal CSS le sadhai apply huncha, jasto sukai screen size hos. @media chai euta
     }
 
     .main-text {
-        padding-top: 40px;
-        margin-top: 40px;
+        padding-top: 10px;
+        margin-top: 10px;
     }
 
     .main-text h2 {
