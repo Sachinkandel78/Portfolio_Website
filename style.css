@@ -642,9 +642,12 @@ aba my projects section suru */
 
 .row img {
     width: 100%;
+    /* height: 100%; */
     border-radius: 8px;
     display: block;
     transition: transform 0.5s;
+    /* object-fit: cover;
+    object-position: center */
 
 }
 
@@ -942,7 +945,7 @@ Normal CSS le sadhai apply huncha, jasto sukai screen size hos. @media chai euta
     .contact-form {
         margin-top: 30px;
     }
-   
+    
 }
 
 /* Tablets and small laptops */
@@ -957,8 +960,8 @@ Normal CSS le sadhai apply huncha, jasto sukai screen size hos. @media chai euta
     }
 
     .main-text {
-        padding-top: 10px;
-        margin-top: 10px;
+        padding-top: 60px;
+        margin-top: 60px;
     }
 
     .main-text h2 {
@@ -1072,6 +1075,7 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
     }
 
     .portfolio-content {
+        
         grid-template-columns: minmax(0, 1fr);
     }
 }
