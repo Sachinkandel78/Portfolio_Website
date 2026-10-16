@@ -1068,7 +1068,8 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
         display: block;
     }
 
-    .navbar {
+        .navbar {
+        display: flex;
         position: fixed;
         top: 0;
         right: -100%;
@@ -1083,8 +1084,14 @@ tara phone ma chai tyo icon dekhauni navbar components lukauni */
         z-index: 1000;
     }
 
+    .navbar a {
+        margin-left: 0;
+    }
+
     .navbar.menu-open {
         right: 0;
+        gap:10px;
+
     }
 }
 
